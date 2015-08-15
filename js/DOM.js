@@ -3,21 +3,6 @@ playlistArrayPosition = 0;
 songArray = [];
 playlist = {};
 
-var myFirebaseRef = new Firebase("https://g11playlist.firebaseio.com/");
-
-var firebasePlaylist = myFirebaseRef.child('Playlists');
-
-var firebaseSongs = myFirebaseRef.child('Songs');
-
-var firebasePlaylistArrayPosition = myFirebaseRef.child('Playlist Array Position');
-
-firebasePlaylist.set({test:'test'});
-
-firebaseSongs.set({test:'test'});
-
-firebasePlaylistArrayPosition.set({number:1});
-
-
 function changeColour(){
   for (var i = 0; i <= songArray.length; i++) {
       var colors = ['#A6FFC6', '#FAAEFF', '#FFB6FF', '#FFB6FF', '#E1FFC0', '#84B7F6'];
@@ -250,7 +235,6 @@ $(document).ready (function(){
       }
     }
   });
-
 
 
 });
